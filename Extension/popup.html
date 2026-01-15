@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ClickDebt</title>
+  <style>
+    body {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      width: 280px;
+      padding: 10px;
+      margin: 0;
+    }
+    h3 { margin: 5px 0; }
+    hr { margin: 8px 0; }
+    #statsContainer {
+      font-size: 11px;
+      max-height: 150px;
+      overflow-y: auto;
+      border: 1px solid #ddd;
+      padding: 8px;
+      border-radius: 4px;
+      background: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <h3>⏱️ ClickDebt</h3>
+
+  <div><b>Clock:</b> <span id="clock">00:00</span></div>
+
+  <label>
+    <input type="checkbox" id="focusToggle">
+    Focus Mode
+  </label>
+
+  <hr>
+  
+  <h4 style="margin: 5px 0; font-size: 12px;">📊 Top Websites:</h4>
+  <div id="statsContainer">
+    <p style="font-size: 11px; color: gray; margin: 0;">Loading...</p>
+  </div>
+
+  <hr>
+
+  <button id="openDash" style="width: 100%; padding: 8px; cursor: pointer; background: #4CAF50; color: white; border: none; border-radius: 4px;">
+    📈 Open Dashboard
+  </button>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClickDebt Dashboard</title>
+    <link rel="stylesheet" href="leaderboard.css">
+</head>
+<body>
+    <!-- Left Sidebar -->
+    <aside id="sidebar">
+        <div class="logo">ClickDebt</div>
+        <nav>
+            <ul>
+                <li class="active" data-page="dashboard">Dashboard</li>
+                <li data-page="history">History</li>
+                <li data-page="leaderboard">Leaderboard</li>
+                <li data-page="profile">Profile</li>
+                <li data-page="logout">Logout</li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Top Bar -->
+        <header id="top-bar">
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+            <div id="clock">00:00:00</div>
+            <div class="avatar">👤</div>
+        </header>
+
+        <!-- Dashboard Content -->
+        <section id="dashboard" class="page active">
+            <!-- Stats Cards -->
+            <div class="stats-cards">
+                <div class="card">
+                    <div class="icon">⏱️</div>
+                    <h3>Total Screen Time</h3>
+                    <p id="screen-time">3h 45m</p>
+                </div>
+                <div class="card">
+                    <div class="icon">💸</div>
+                    <h3>Procrastination Tax</h3>
+                    <p id="tax">₹34,900</p>
+                </div>
+                <div class="card">
+                    <div class="icon">🔥</div>
+                    <h3>Focus Streak</h3>
+                    <p id="streak">5 Days</p>
+                </div>
+                <div class="card">
+                    <div class="icon">📊</div>
+                    <h3>Productivity Score</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Focus Mode Section -->
+            <div class="focus-mode">
+                <h3>Focus Mode</h3>
+                <label class="switch">
+                    <input type="checkbox" id="focus-toggle">
+                    <span class="slider"></span>
+                </label>
+                <p id="focus-status">Focus Mode Off 🔴</p>
+            </div>
+
+            <!-- App Usage Tracker -->
+            <div class="app-usage">
+                <h3>App Usage Tracker</h3>
+                <ul>
+                    <li>Instagram – <span id="insta-time">45 min</span></li>
+                    <li>Snapchat – <span id="snap-time">34 min</span></li>
+                    <li>WhatsApp – <span id="wa-time">26 min</span></li>
+                </ul>
+            </div>
+
+            <!-- Usage Graph -->
+            <div class="usage-graph">
+                <h3>Usage Graph</h3>
+                <div class="toggle-buttons">
+                    <button id="today-btn" class="active">Today</button>
+                    <button id="week-btn">This Week</button>
+                </div>
+                <canvas id="chart" width="600" height="300"></canvas>
+            </div>
+
+            <!-- Leaderboard Highlight -->
+            <div class="leaderboard">
+                <h3>Leaderboard Highlight</h3>
+                <table>
+                    <tr>
+                        <td>🥇</td>
+                        <td>You</td>
+                        <td>₹34,900</td>
+                    </tr>
+                    <tr>
+                        <td>🥈</td>
+                        <td>User2</td>
+                        <td>₹28,500</td>
+                    </tr>
+                    <tr>
+                        <td>🥉</td>
+                        <td>User3</td>
+                        <td>₹22,100</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- Placeholder for other pages (hidden by default) -->
+        <section id="history" class="page">History Page (Placeholder)</section>
+        <section id="leaderboard" class="page">Leaderboard Page (Placeholder)</section>
+        <section id="profile" class="page">Profile Page (Placeholder)</section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClickDebt Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Left Sidebar -->
+    <aside id="sidebar">
+        <div class="logo">ClickDebt</div>
+        <nav>
+            <ul>
+                <li data-page="dashboard">Dashboard</li>
+                <li class="active" data-page="history">History</li>
+                <li data-page="leaderboard">Leaderboard</li>
+                <li data-page="profile">Profile</li>
+                <li data-page="stats">Stats</li>
+                <li data-page="logout">Logout</li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Top Bar -->
+        <header id="top-bar">
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+            <div id="clock">00:00:00</div>
+            <div class="avatar">👤</div>
+        </header>
+
+        <!-- Dashboard Content (Placeholder) -->
+        <section id="dashboard" class="page">Dashboard Page (Placeholder)</section>
+
+        <!-- History Content -->
+        <section id="history" class="page active">
+            <h2>History</h2>
+            <p class="subtitle">Your past focus and procrastination activity</p>
+            <div class="date-filters">
+                <button id="today-filter" class="active">Today</button>
+                <button id="week-filter">This Week</button>
+                <button id="month-filter">This Month</button>
+            </div>
+            <div id="history-content">
+                <div class="history-card">
+                    <div class="date">2023-10-05</div>
+                    <div class="details">
+                        <span>Instagram – 45 min</span>
+                        <span>Tax: ₹450</span>
+                    </div>
+                </div>
+                <div class="history-card">
+                    <div class="date">2023-10-05</div>
+                    <div class="details">
+                        <span>YouTube – 30 min</span>
+                        <span>Tax: ₹300</span>
+                    </div>
+                </div>
+                <div class="history-card">
+                    <div class="date">2023-10-04</div>
+                    <div class="details">
+                        <span>Facebook – 20 min</span>
+                        <span>Tax: ₹200</span>
+                    </div>
+                </div>
+                <div class="history-card">
+                    <div class="date">2023-10-04</div>
+                    <div class="details">
+                        <span>Twitter – 15 min</span>
+                        <span>Tax: ₹150</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Leaderboard Content (Placeholder) -->
+        <section id="leaderboard" class="page">Leaderboard Page (Placeholder)</section>
+
+        <!-- Profile Content (Placeholder) -->
+        <section id="profile" class="page">Profile Page (Placeholder)</section>
+
+        <!-- Stats Content -->
+        <section id="stats" class="page">
+            <h2>Stats & Insights</h2>
+            <p class="subtitle">Your productivity overview</p>
+            <div class="stats-cards">
+                <div class="stat-card">
+                    <div class="icon">⏱️</div>
+                    <h3>Total Screen Time</h3>
+                    <p>8h 30m</p>
+                </div>
+                <div class="stat-card">
+                    <div class="icon">💸</div>
+                    <h3>Procrastination Tax</h3>
+                    <p>₹12,500</p>
+                </div>
+                <div class="stat-card">
+                    <div class="icon">🔥</div>
+                    <h3>Focus Streak</h3>
+                    <p>7 Days</p>
+                </div>
+                <div class="stat-card">
+                    <div class="icon">📊</div>
+                    <h3>Productivity Score</h3>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 80%;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="charts">
+                <div class="chart-container">
+                    <h3>Daily Focus Time</h3>
+                    <canvas id="daily-chart" width="400" height="200"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>Weekly Usage Comparison</h3>
+                    <canvas id="weekly-chart" width="400" height="200"></canvas>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

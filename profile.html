@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClickDebt Dashboard</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <!-- Left Sidebar -->
+    <aside id="sidebar">
+        <div class="logo">ClickDebt</div>
+        <nav>
+            <ul>
+                <li data-page="dashboard">Dashboard</li>
+                <li data-page="history">History</li>
+                <li data-page="leaderboard">Leaderboard</li>
+                <li class="active" data-page="profile">Profile</li>
+                <li data-page="logout">Logout</li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Top Bar -->
+        <header id="top-bar">
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+            <div  id="clock">00:00:00</div>
+            
+        </header>
+
+        <!-- Dashboard Content (Placeholder) -->
+        <section id="dashboard" class="page">Dashboard Page (Placeholder)</section>
+
+        <!-- History Content (Placeholder) -->
+        <section id="history" class="page">History Page (Placeholder)</section>
+
+        <!-- Leaderboard Content (Placeholder) -->
+        <section id="leaderboard" class="page">Leaderboard Page (Placeholder)</section>
+
+        <!-- Profile Content -->
+        <section id="profile" class="page active">
+            <h2>Profile</h2>
+            <div class="profile-info">
+                <div class="avatar-large" id="avatar-edit">👤</div>
+                <h3 id="name-display">Aditya Tripathi</h3>
+                <p id="email-display">aditya.tripathi@example.com</p>
+                <div id="edit-controls" style="display: none;">
+                    <input type="text" id="name-input" value="Aditya Tripathi">
+                    <input type="email" id="email-input" value="aditya.tripathi@example.com">
+                    <button id="save-btn">Save</button>
+                    <button id="cancel-btn">Cancel</button>
+                </div>
+            </div>
+            <div class="activity-summary">
+                <h3>Activity Summary</h3>
+                <div class="activity-card">
+                    <p>Last Login: 2 hours ago</p>
+                    <p>Total Procrastination Tax Paid: ₹34,900</p>
+                    <p>Focus Streak: 5 Days</p>
+                </div>
+            </div>
+            <div class="settings-section">
+                <h3>General</h3>
+                <div class="setting-card" data-setting="profile">
+                    <div class="icon">👤</div>
+                    <span>Profile Settings – Update user details</span>
+                    <div class="arrow">></div>
+                    <div class="sub-settings" style="display: none;">
+                        <p>Display Name: <input type="text" placeholder="Aditya Tripathi"></p>
+                        <p>Bio: <textarea placeholder="Add a short bio..."></textarea></p>
+                    </div>
+                </div>
+                <div class="setting-card" data-setting="privacy">
+                    <div class="icon">🔒</div>
+                    <span>Privacy – Change password and security</span>
+                    <div class="arrow">></div>
+                    <div class="sub-settings" style="display: none;">
+                        <p>Change Password: <input type="password" placeholder="New password"></p>
+                        <p>Two-Factor Auth: <label><input type="checkbox"> Enable</label></p>
+                    </div>
+                </div>
+                <div class="setting-card" data-setting="notifications">
+                    <div class="icon">🔔</div>
+                    <span>Notifications – Manage notification preferences</span>
+                    <div class="arrow">></div>
+                    <div class="sub-settings" style="display: none;">
+                        <p>Email Alerts: <label><input type="checkbox" checked> Daily Summary</label></p>
+                        <p>Push Notifications: <label><input type="checkbox"> Focus Mode Reminders</label></p>
+                    </div>
+                </div>
+                <h3>Account</h3>
+                <div class="setting-card" data-setting="delete">
+                    <div class="icon">🗑️</div>
+                    <span>Delete Account – Permanently remove your data</span>
+                    <div class="arrow">></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
